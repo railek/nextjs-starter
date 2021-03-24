@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonJS",
+    "target": "es2020",
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  }
+}

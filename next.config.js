@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  reactStrictMode: true,
   webpack: (config) => {
     const configuration = config;
     configuration.optimization.providedExports = true;

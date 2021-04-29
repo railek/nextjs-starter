@@ -1,6 +1,9 @@
 const path = require('path');
 
 module.exports = {
+  future: {
+    webpack5: true,
+  },
   reactStrictMode: true,
   webpack: (config) => {
     const configuration = config;

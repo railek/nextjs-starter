@@ -5,6 +5,10 @@ module.exports = {
     webpack5: true,
   },
   reactStrictMode: true,
+  images: {
+    domains: ['source.unsplash.com'],
+    formats: ['image/avif', 'image/webp'],
+  },
   webpack: (config) => {
     const configuration = config;
     configuration.optimization.providedExports = true;

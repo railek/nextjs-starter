@@ -1,8 +1,8 @@
 const path = require('path');
 
 module.exports = {
-  future: {
-    webpack5: true,
+  eslint: {
+    ignoreDuringBuilds: true,
   },
   reactStrictMode: true,
   images: {

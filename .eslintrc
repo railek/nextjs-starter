@@ -6,6 +6,7 @@
     "plugin:import/recommended",
     "plugin:jsx-a11y/recommended",
     "airbnb",
+    "plugin:@next/next/recommended",
     "prettier"
   ],
   "plugins": [

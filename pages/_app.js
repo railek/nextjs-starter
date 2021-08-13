@@ -1,6 +1,8 @@
 import React from 'react';
-import Seo from '@/components/seo';
+
 import Layout from '@/components/layout';
+import Seo from '@/components/seo';
+
 import GlobalStyles from '../styles';
 
 export default function App({ Component, pageProps }) {

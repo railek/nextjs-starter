@@ -1,14 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import styled from 'styled-components';
 
-const StyledBackgroundImage = styled.div`
-  position: fixed;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  z-index: -10;
-`;
+import { StyledBackgroundImage } from './next-image.styled';
 
 export default function NextImage({ url, alt = '', width, height, layout, fit, quality = 75 }) {
   const props = {

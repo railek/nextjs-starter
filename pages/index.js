@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NextImage from '../components/next-image';
+import NextImage from '../components/elements/next-image';
 
 export default function Home() {
   return (

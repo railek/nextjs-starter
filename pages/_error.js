@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function Error({ statusCode }) {
   return <h1>{statusCode ? `Server Error: ${statusCode}` : 'Client Error'}</h1>;
@@ -16,4 +17,8 @@ Error.getInitialProps = ({ res, err }) => {
   }
 
   return { statusCode };
+};
+
+Error.propTypes = {
+  statusCode: PropTypes.number.isRequired,
 };

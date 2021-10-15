@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import Layout from '@/components/layout';
 import Seo from '@/components/elements/seo';
+import Layout from '@/components/layout';
 
 import GlobalStyles from '../styles';
 
@@ -16,3 +17,8 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
+
+App.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.shape({}).isRequired,
+};

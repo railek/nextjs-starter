@@ -1,9 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
+import PropTypes from 'prop-types';
 
 import { StyledBackgroundImage } from './next-image.styled';
 
-export default function NextImage({ url, alt = '', width, height, layout, fit, quality = 75 }) {
+export default function NextImage({ url, alt, width, height, layout, fit, quality }) {
   const props = {
     src: url,
     quality,
@@ -31,3 +32,22 @@ export default function NextImage({ url, alt = '', width, height, layout, fit, q
     </StyledBackgroundImage>
   );
 }
+
+NextImage.defaultProps = {
+  width: null,
+  height: null,
+  alt: '',
+  layout: 'intrinsic',
+  fit: 'fill',
+  quality: 75,
+};
+
+NextImage.propTypes = {
+  width: PropTypes.string,
+  height: PropTypes.string,
+  url: PropTypes.string.isRequired,
+  alt: PropTypes.string,
+  layout: PropTypes.oneOf(['intrinsic', 'fixed', 'responsive', 'fill']),
+  fit: PropTypes.oneOf(['contain', 'cover', 'fill', 'none', 'scale-down']),
+  quality: PropTypes.number,
+};

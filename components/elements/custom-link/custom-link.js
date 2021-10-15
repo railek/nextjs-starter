@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 
 import IsUrl from '@/utilities/is-url';
 
@@ -29,3 +30,8 @@ export default function CustomLink({ link, children }) {
     </a>
   );
 }
+
+CustomLink.propTypes = {
+  link: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};

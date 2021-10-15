@@ -1,12 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
+import PropTypes from 'prop-types';
 
-export default function Seo({
-  title = 'Next.js',
-  description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  type = 'website',
-  image = 'https://dummyimage.com/1200x600/000000/fff',
-}) {
+export default function Seo({ title, description, type, image }) {
   return (
     <Head>
       <title>{title}</title>
@@ -27,3 +23,17 @@ export default function Seo({
     </Head>
   );
 }
+
+Seo.defaultProps = {
+  title: 'Next.js',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  type: 'website',
+  image: 'https://dummyimage.com/1200x600/000000/fff',
+};
+
+Seo.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  type: PropTypes.oneOf(['website', 'profile', 'book', 'article', 'video', 'music']),
+  image: PropTypes.string,
+};

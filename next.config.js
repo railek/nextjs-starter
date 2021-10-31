@@ -4,6 +4,10 @@ module.exports = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  swcMinify: true,
+  experimental: {
+    styledComponents: true,
+  },
   reactStrictMode: true,
   images: {
     domains: ['source.unsplash.com'],

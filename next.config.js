@@ -6,6 +6,9 @@ module.exports = {
   },
   swcMinify: true,
   experimental: {
+    outputStandalone: true,
+  },
+  compiler: {
     styledComponents: true,
   },
   reactStrictMode: true,
